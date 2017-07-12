@@ -37,11 +37,7 @@
                 {{_('<a href="%(url)s">Update</a> your Firefox for the latest in speed and privacy.')|format(url='https://support.mozilla.org/kb/update-firefox-latest-version') }}
               </p>
               <p id="version-message-desktop-pre-release" class="version-message">
-                {% if l10n_has_tag('firefox_new_pre_release') %}
-                  {{_('You’re using a pre-release version of Firefox.') }}
-                {% else %}
-                  {{_('Congrats! You’re using the latest version of Firefox.')}}
-                {% endif %}
+                {{_('You’re using a pre-release version of Firefox.') }}
               </p>
             </div>{#-- /.version-message-container --#}
           </header>
