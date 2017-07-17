@@ -393,7 +393,7 @@ class FirstrunView(l10n_utils.LangFilesMixin, TemplateView):
         if detect_channel(version) == 'alpha':
             template = 'firefox/dev-firstrun.html'
         elif show_40_firstrun(version):
-            if lang_file_is_active('firefox/firstrun/onboarding', locale):
+            if lang_file_is_active('firefox/new/onboarding', locale):
                 template = 'firefox/firstrun/onboarding.html'
             else:
                 template = 'firefox/firstrun/firstrun-horizon.html'
