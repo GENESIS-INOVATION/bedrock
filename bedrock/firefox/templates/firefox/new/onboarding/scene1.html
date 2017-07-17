@@ -6,6 +6,18 @@
 
 {% extends "firefox/new/onboarding/base.html" %}
 
+{% block experiments %}
+  {% if switch('firefox-new-search-retention-funnelcakes', ['en-US']) %}
+    {% javascript 'experiment_firefox_new_fc_search_retention' %}
+  {% endif %}
+{% endblock %}
+
+{% block optimizely %}
+  {% if switch('firefox-new-optimizely', ['en-US']) %}
+    {% include 'includes/optimizely.html' %}
+  {% endif %}
+{% endblock %}
+
 {# all CSS must be in extrahead block for old IE #}
 {% block extrahead %}
   {% stylesheet 'firefox_new_onboarding_common' %}
